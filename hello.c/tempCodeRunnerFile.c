@@ -1,0 +1,12 @@
+head=insert_at_first(head);
+display(head);
+head=delete_at_first(head);
+display(head);
+insert_at_last(head);
+display(head);
+delete_at_last(head);
+display(head);
+insert_at_position(head);
+display(head);
+remove_at_position(head);
+display(head);
