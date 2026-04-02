@@ -40,21 +40,20 @@ int main(){
         }
         else if(infix[i]==')'){
             while(stack[top]!='('){
-                postfix[j]==pop();
+                postfix[j]=pop();
                 j++;
             }
             pop();
         }
         else {
-            if(top!=-1 && precedence(stack[top])>=precedence(infix[i])){
-                stack[top]=infix[i];
-                top++;
+            while(top!=-1 && precedence(stack[top])>=precedence(infix[i])){
+        postfix[j]=pop();
+        j++;
             }
-            else{
-                push(infix[i]);
-            }
+            push(infix[i]);
+            
         }
-        i++;
+
         
     }
     while(top!=-1){
