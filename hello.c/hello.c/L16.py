@@ -13,11 +13,11 @@
 # s=int(input("enter  a number"))
 # res=[]
 # for i in l:
-#     if j in l:
+#     if i in l:
 #         if i+j==s:
 #             count+=1
 # print(count)
-# file handeling
+#file handeling
 # with open("text.txt","r") as f:
 #     data = f.read()
 # print(data)
@@ -42,18 +42,13 @@
 #     f.write("nothing")
 #     f.write("\ni am sleeping \n")
 def say(data):
-    rest=""
-    word="something"
     for i in data:
-        if i is word:
-            rest+="nothing"
-        if i is not word:
-            rest+=i
+        if i==something:
+            i=nothing
     return data
 with open("text.txt","r") as f:
     data=f.read()
 with open("5.py","w") as f:
     f.write(data)
 with open("5.py","a") as f:
-
-    # f.write(say(data))
+    f.write(say(data))

@@ -17,8 +17,7 @@ void push(char element){
 }
 char pop(){
     if(top==-1){
-        printf("there is no elements");
-    
+        printf("there is no space");
     }
     else{
     char element=stack[top];
@@ -41,7 +40,6 @@ else{
 int main() {
     printf("enter a expression");
     scanf("%s",infix);
-    int i=0;
     while(infix[i]!='\0'){
         if(isalnum(infix[i])){
             postfix[j]=infix[i];
@@ -51,8 +49,8 @@ int main() {
             push(infix[i]);
             }
         else if(infix[i]==')'){
-                while(top!=-1 && stack[top]!='('){
-                    postfix[j]=pop();
+                while(stack[top]!='('){
+                    postfix[j]==pop();
                     j++;
                 }
                 pop();
@@ -63,9 +61,9 @@ int main() {
                 postfix[j]=pop();
                 j++;
             }
-            
+            else{
                 push(infix[i]);
-            
+            }
         }
         i++;
 
